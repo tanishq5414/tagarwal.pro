@@ -27,11 +27,17 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href={process.env.NEXT_PUBLIC_RESUME_URL} target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-gray-900 transition-colors">
+            <a href={process.env.NEXT_PUBLIC_TWITTER_URL} target="_blank" rel="noopener noreferrer" className="text-lg text-gray-700 hover:text-gray-900 transition-colors">
               Slide into my DMs on <span className="underline cursor-pointer">𝕏 (Twitter).</span>
             </a>
           </li>
         </ul>
+      </div>
+      <div className="pt-12">
+        <a className="text-3xl text-black">Blogs</a>
+      </div>
+      <div className="pt-12">
+        <a className="text-3xl text-black">Side Projects</a>
       </div>
     </div>
   );
