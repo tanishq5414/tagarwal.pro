@@ -6,7 +6,7 @@ export function NavBar() {
       <h1 className="text-md hover:underline cursor-pointer text-black dark:text-white">hey@tanishq.com</h1>
       <div className="flex items-center gap-8 text-black dark:text-white">
         <Link href="/">Home</Link>
-        <Link href="/blogs">Blogs</Link>
+        <Link href="/blogs">Blog</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/resume">Resume</Link>
         <Link href="/awards">Awards</Link>
