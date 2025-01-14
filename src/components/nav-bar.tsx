@@ -9,8 +9,7 @@ export function NavBar() {
         <Link href="/blog">Blog</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/resume">Resume</Link>
-        <Link href="/awards">Awards</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/gallery">Gallery</Link>
       </div>
     </div>
   );

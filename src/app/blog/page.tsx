@@ -26,7 +26,7 @@ export default function BlogPage() {
     const posts = getBlogMetaData('blogs')
     
     return (
-        <main className="max-w-4xl mx-auto py-8">
+        <main className="max-w-4xl mx-auto pb-8">
             <h1 className="text-4xl font-bold mb-8 text-orange-500">Blog Posts</h1>
             <div className="space-y-8">
                 {posts.map((post) => {
