@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { GridBackground } from "@/components/grid-background";
+import { CSPostHogProvider } from "./provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,16 +27,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <CSPostHogProvider>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GridBackground>
-        <div className="min-h-screen">
-          <div className="w-[50vw] flex items-center">
-              <NavBar />
-              <div className="pt-[6rem] px-6 w-full" >{children}</div>
+          <div className="min-h-screen lg:w-[50vw]">
+            <NavBar />
+            <div className="lg:w-[50vw] pt-12">
+              <div className="w-full">{children}</div>
+            </div>
           </div>
-        </div>
         </GridBackground>
       </body>
+      </CSPostHogProvider>
     </html>
   );
 }

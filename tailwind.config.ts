@@ -24,11 +24,16 @@ module.exports = {
   		},
 		animation: {
 			rotate: 'rotate 10s linear infinite',
+			'blur-fade-in': 'blur-fade-in 0.3s ease-out forwards',
 		},
 		keyframes: {
 			rotate: {
 				'0%': { transform: 'rotate(0deg)' },
 				'100%': { transform: 'rotate(360deg)' },
+			},
+			'blur-fade-in': {
+				'0%': { opacity: '0', filter: 'blur(50px)' },
+				'100%': { opacity: '1', filter: 'blur(0px)' },
 			},
 		},
       fontFamily: {
