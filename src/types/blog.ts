@@ -1,8 +1,7 @@
 export type BlogParams = {
-    params: {
+    params: Promise<{
         slug: string
-    }
-    searchParams: Record<string, string | string[] | undefined>
+    }>
 }
 
 export interface PostContent {

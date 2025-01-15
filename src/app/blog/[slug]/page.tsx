@@ -7,8 +7,8 @@ import { getPostContent, generateBlogStaticParams } from '@/utils/blog'
 
 export const generateStaticParams = generateBlogStaticParams
 
-export default function BlogPost({ params }: BlogParams) {
-    const post = getPostContent(params.slug)
+export default async function BlogPost( {params} : BlogParams) {
+    const post = getPostContent((await (params)).slug)
 
     if (!post) {
         notFound()
