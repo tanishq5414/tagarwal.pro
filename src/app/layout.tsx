@@ -4,6 +4,8 @@ import "./globals.css";
 import { NavBar } from "@/components/nav-bar";
 import { GridBackground } from "@/components/grid-background";
 import { CSPostHogProvider } from "./provider";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +40,7 @@ export default function RootLayout({
           </div>
         </GridBackground>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
       </CSPostHogProvider>
     </html>
   );
