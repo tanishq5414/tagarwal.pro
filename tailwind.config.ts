@@ -24,7 +24,7 @@ module.exports = {
   		},
 		animation: {
 			rotate: 'rotate 10s linear infinite',
-			'blur-fade-in': 'blur-fade-in 0.3s ease-out forwards',
+			'blur-fade-in': 'blur-fade-in 0.4s ease-out forwards',
 		},
 		keyframes: {
 			rotate: {

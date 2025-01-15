@@ -27,7 +27,7 @@ export const BlogContent = ({ content }: BlogContentProps) => {
                     <hr className="my-12 border-zinc-200" {...props} />
                 ),
                 img: ({node, ...props}) => (
-                    <img className="w-full h-auto" {...props} />
+                    <img className="w-full h-auto" {...props} alt='blog-image' />
                 ),
                 a: ({node, ...props}) => (
                     <a target="_blank" className="text-blue-600 hover:text-blue-800 transition-colors" {...props} />

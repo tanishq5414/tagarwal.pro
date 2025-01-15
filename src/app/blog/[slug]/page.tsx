@@ -38,7 +38,11 @@ export default function BlogPost({ params }: BlogParams) {
                     prose-strong:text-zinc-900
                     prose-ul:text-zinc-900
                     prose-ol:text-zinc-900
+                    prose-ol:ml-6
+                    prose-ol:list-decimal
                     prose-li:text-zinc-900
+                    prose-li:pl-2
+                    prose-li:my-2
                     prose-blockquote:text-zinc-700
                     prose-blockquote:border-l-4
                     prose-blockquote:border-zinc-300
