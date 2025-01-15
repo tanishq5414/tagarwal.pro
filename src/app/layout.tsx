@@ -30,9 +30,9 @@ export default function RootLayout({
       <CSPostHogProvider>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GridBackground>
-          <div className="min-h-screen lg:w-[50vw] animate-blur-fade-in">
+          <div className="min-h-screen lg:w-[70vw] xl:w-[50vw] md:px-0 px-6">
             <NavBar />
-            <div className="lg:w-[50vw] pt-12">
+            <div className="pt-12 animate-blur-fade-in">
               <div className="w-full">{children}</div>
             </div>
           </div>

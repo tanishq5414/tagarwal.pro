@@ -16,7 +16,7 @@ export default async function BlogPost( {params} : BlogParams) {
 
     return (
         <div className="w-full animate-blur-fade-in">
-            <div className="max-w-4xl mx-auto pt-8 px-6">
+            <div className=" mx-auto pt-8 px-6">
                 <article className="prose prose-lg
                     prose-headings:text-zinc-900
                     prose-p:text-zinc-900
@@ -25,7 +25,11 @@ export default async function BlogPost( {params} : BlogParams) {
                     prose-code:text-zinc-900
                     prose-code:bg-zinc-100
                     prose-code:p-1 prose-code:rounded
+                    prose-code:overflow-x-auto
+                    prose-code:whitespace-nowrap
+                    prose-code:max-w-[90vw] sm:prose-code:max-w-full
                     prose-pre:bg-zinc-100
+                    prose-pre:[white-space:prewrap]
                     prose-pre:p-4 prose-pre:rounded-lg
                     prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl
                     prose-h1:font-bold prose-h2:font-bold prose-h3:font-semibold prose-h4:font-medium

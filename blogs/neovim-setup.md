@@ -43,17 +43,6 @@ Nothing fancy, just a clean split between core config and plugins. I learned the
 
 Got tired of typing `:w` a thousand times a day, so here's what I'm using:
 
-```lua
--- Normal people save with Ctrl+S
-vim.keymap.set('n', '<C-s>', ':w<CR>')
-
--- Quick source because I'm constantly tweaking this thing
-vim.keymap.set('n', '<leader>so', ':so %<CR>')
-
--- Buffer navigation that doesn't make me cry
-vim.keymap.set('n', '<C-h>', ':bprevious<CR>')
-vim.keymap.set('n', '<C-l>', ':bnext<CR>')
-```
 
 ### Plugins I Can't Live Without
 
@@ -71,25 +60,6 @@ vim.keymap.set('n', '<C-l>', ':bnext<CR>')
 ### Plugin Management
 
 Using Lazy.nvim because, well, it's fast and it just works. Here's a snippet:
-
-```lua
-return {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      require("catppuccin").setup()
-      vim.cmd.colorscheme "catppuccin"
-    end,
-  },
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = false,  -- If lazy is true then it will not load the plugin immediately on startup 
-  }
-}
-```
 
 ## The Pain Points
 
