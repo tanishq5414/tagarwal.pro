@@ -1,37 +1,13 @@
 import React from 'react'
-import fs from 'fs'
-import matter from "gray-matter"
 import { notFound } from 'next/navigation'
-import path from 'path'
-import getBlogMetaData from "@/utils/getBlogMetaData"
-import ReactMarkdown from 'react-markdown'
+import { BlogHeader } from '@/components/blog/BlogHeader'
+import { BlogContent } from '@/components/blog/BlogContent'
+import { BlogParams } from '@/types/blog'
+import { getPostContent, generateBlogStaticParams } from '@/utils/blog'
 
-type Params = {
-    params: {
-        slug: string
-    }
-    searchParams: Record<string, string | string[] | undefined>
-}
+export const generateStaticParams = generateBlogStaticParams
 
-function getPostContent(slug: string) {
-    const folder = path.join(process.cwd(), 'blogs')
-    const file = path.join(folder, `${slug}.md`)
-    try {
-        const content = fs.readFileSync(file, 'utf8')
-        const matterResult = matter(content)
-        return matterResult
-    } catch (error) {
-        console.error(`Error reading blog post ${slug}:`, error)
-        return null
-    }
-}
-
-export const generateStaticParams = async () => {
-    const posts = getBlogMetaData('blogs')
-    return posts.map((post) => ({ slug: post.slug }))
-}
-
-export default function BlogPost({ params }: Params) {
+export default function BlogPost({ params }: BlogParams) {
     const post = getPostContent(params.slug)
 
     if (!post) {
@@ -41,27 +17,36 @@ export default function BlogPost({ params }: Params) {
     return (
         <div className="w-full animate-blur-fade-in">
             <div className="max-w-4xl mx-auto pt-8 px-6">
-                <article className="prose prose-lg dark:prose-invert 
-                    prose-headings:text-black dark:prose-headings:text-white 
-                    prose-p:text-gray-700 dark:prose-p:text-gray-300 
-                    prose-code:text-gray-800 dark:prose-code:text-gray-200
-                    prose-code:bg-gray-100 dark:prose-code:bg-gray-800
+                <article className="prose prose-lg
+                    prose-headings:text-zinc-900
+                    prose-p:text-zinc-900
+                    prose-p:[line-height:3]
+                    prose-li:[line-height:3]
+                    prose-code:text-zinc-900
+                    prose-code:bg-zinc-100
                     prose-code:p-1 prose-code:rounded
-                    prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800 
+                    prose-pre:bg-zinc-100
                     prose-pre:p-4 prose-pre:rounded-lg
-                    prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl
-                    prose-h1:font-bold prose-h2:font-semibold prose-h3:font-medium
-                    prose-h1:mt-8 prose-h2:mt-6 prose-h3:mt-4
+                    prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl
+                    prose-h1:font-bold prose-h2:font-bold prose-h3:font-semibold prose-h4:font-medium
+                    prose-h1:mb-8 prose-h2:mb-6 prose-h3:mb-6 prose-h4:mb-6
+                    prose-h1:mt-16 prose-h2:mt-12 prose-h3:mt-8 prose-h4:mt-8
+                    prose-h1:tracking-tight prose-h2:tracking-tight
+                    prose-h1:text-zinc-900 prose-h2:text-zinc-900 prose-h3:text-zinc-800 prose-h4:text-zinc-800
+                    prose-a:text-blue-600
+                    prose-img:rounded-lg
+                    prose-strong:text-zinc-900
+                    prose-ul:text-zinc-900
+                    prose-ol:text-zinc-900
+                    prose-li:text-zinc-900
+                    prose-blockquote:text-zinc-700
+                    prose-blockquote:border-l-4
+                    prose-blockquote:border-zinc-300
+                    prose-blockquote:pl-4
+                    prose-blockquote:italic
                     max-w-none">
-                    <h1 className="text-4xl font-bold mb-4 text-black">{post.data.title}</h1>
-                    {post.data.date && (
-                        <p className="text-sm text-gray-600 mb-8">
-                            {new Date(post.data.date).toLocaleDateString()}
-                        </p>
-                    )}
-                    <ReactMarkdown className="markdown-content">
-                        {post.content}
-                    </ReactMarkdown>
+                    <BlogHeader title={post.data.title} date={post.data.date} />
+                    <BlogContent content={post.content} />
                 </article>
             </div>
         </div>

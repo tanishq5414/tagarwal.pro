@@ -4,8 +4,6 @@ date: "2024-02-15"
 description: "A personal journey of switching to Neovim, complete with configuration details, essential plugins, and lessons learned along the way."
 ---
 
-# Moving to Neovim: My Lua Setup
-
 Just switched to Neovim last month, and like ThePrimeagen says - if your editor isn't blazingly fast, why even bother? Here's my setup after countless hours of config tweaking and Stack Overflow visits.
 
 ## Why Neovim?
@@ -60,15 +58,15 @@ vim.keymap.set('n', '<C-l>', ':bnext<CR>')
 ### Plugins I Can't Live Without
 
 #### The Must-Haves
-- **Telescope**: Because life's too short to use `find` (This is god send for me Neotree is just too slow)
-- **LSP**: Makes my code look less awful before code review (I'm not a professional coder)
-- **Treesitter**: Syntax highlighting that doesn't break every five minutes (I'm not a professional coder)
-- **Harpoon**: Quick jumping between files I'm actually working on (Thanks Primeagen)
+- Telescope: Because life's too short to use `find` (This is god send for me Neotree is just too slow)
+- LSP: Makes my code look less awful before code review (I'm not a professional coder)
+- Treesitter: Syntax highlighting that doesn't break every five minutes (I'm not a professional coder)
+- Harpoon: Quick jumping between files I'm actually working on (Thanks Primeagen)
 
 #### The Nice-to-Haves
-- **Catppuccin**: A color scheme that doesn't burn my eyes at 2 AM (Love the colors from this theme)
-- **Auto-close**: Because I'm too lazy to type closing brackets (Must need if you are moving from VSCode)
-- **None-ls**: Formats my code so I can blame the tool instead of my style (I didnot understand this one)
+- Catppuccin: A color scheme that doesn't burn my eyes at 2 AM (Love the colors from this theme)
+- Auto-close: Because I'm too lazy to type closing brackets (Must need if you are moving from VSCode)
+- None-ls: Formats my code so I can blame the tool instead of my style (I didnot understand this one)
 
 ### Plugin Management
 
