@@ -7,6 +7,7 @@ import { CSPostHogProvider } from "./provider";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { generateSitemap } from "@/utils/sitemap";
 import robots from "./robots";
+import Footer from "@/components/footer";
 
 
 const geistSans = Geist({
@@ -63,6 +64,7 @@ export default function RootLayout({
             <div className="pt-12 animate-blur-fade-in">
               <div className="w-full">{children}</div>
             </div>
+            <Footer />
           </div>
         </GridBackground>
       </body>
