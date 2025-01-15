@@ -6,6 +6,7 @@ import { GridBackground } from "@/components/grid-background";
 import { CSPostHogProvider } from "./provider";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { generateSitemap } from "@/utils/sitemap";
+import robots from "./robots";
 
 
 const geistSans = Geist({
