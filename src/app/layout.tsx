@@ -5,6 +5,7 @@ import { NavBar } from "@/components/nav-bar";
 import { GridBackground } from "@/components/grid-background";
 import { CSPostHogProvider } from "./provider";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { generateSitemap } from "@/utils/sitemap";
 
 
 const geistSans = Geist({
@@ -19,7 +20,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tanishq Agarwal | Portfolio",
-  description: "Tanishq Agarwal | Portfolio",
+  description: "Tanishq Agarwal Portfolio Website",
+  applicationName: "Portfolio Tanishq Agarwal",
+  generator: "Next.js",
+  keywords: process.env.NEXT_PUBLIC_KEYWORDS ? process.env.NEXT_PUBLIC_KEYWORDS.split(",").map(keyword => keyword.trim()) : [],
+  authors: [{ name: "Tanishq Agarwal", url: "https://tvnishq.com" }],
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  referrer: "no-referrer",
+  creator: "Tanishq Agarwal",
+  publisher: "Tanishq Agarwal",
+  category: "Portfolio",
+  classification: "Portfolio",
+  themeColor: "#000000",
+  openGraph: {
+    title: "Tanishq Agarwal | Portfolio",
+    description: "Tanishq Agarwal Portfolio Website",
+    url: "https://tvnishq.com",
+    siteName: "Tanishq Agarwal | Portfolio",
+    images: [{ url: "https://tvnishq.com/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [{ url: "https://tvnishq.com/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
+  },
 };
 
 export default function RootLayout({
@@ -27,6 +51,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  generateSitemap();
   return (
     <html lang="en" suppressHydrationWarning>
       <CSPostHogProvider>

@@ -8,11 +8,13 @@ export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 w-full flex flex-col bg-white z-50">
+    <div className="sticky top-0 w-full flex flex-col backdrop-blur-sm z-50">
       <div className="flex justify-between items-center max-h-16 p-4">
-        <h1 className="text-md hover:underline cursor-pointer text-black dark:text-white">
-          hey@tvnishq.com
-        </h1>
+        <Link href="/">
+          <h1 className="text-lg hover:underline cursor-pointer text-black dark:text-white">
+            tvnishq.com
+          </h1>
+        </Link>
         
         {/* Mobile menu button */}
         <button 

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import fs from 'fs'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
+import { generateSitemap } from '@/utils/sitemap'
 
 export async function generateMetadata() {
     return {

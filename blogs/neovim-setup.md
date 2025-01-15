@@ -1,6 +1,6 @@
 ---
 title: "Moving to Neovim: My Lua Setup"
-date: "2024-02-15"
+date: "2025-01-15"
 description: "A personal journey of switching to Neovim, complete with configuration details, essential plugins, and lessons learned along the way."
 ---
 
