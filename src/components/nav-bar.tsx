@@ -12,7 +12,7 @@ export function NavBar() {
       <div className="flex justify-between items-center max-h-16 p-4">
         <Link href="/">
           <h1 className="text-lg hover:underline cursor-pointer text-black dark:text-white">
-            tvnishq.com
+            tagarwal.pro
           </h1>
         </Link>
         

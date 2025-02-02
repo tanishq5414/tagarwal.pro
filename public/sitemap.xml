@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
         <url>
-            <loc>https://tvnishq.com/</loc>
+            <loc>https://tagarwal.pro/</loc>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>
         </url>
         <url>
-            <loc>https://tvnishq.com/gallery</loc>
+            <loc>https://tagarwal.pro/gallery</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
         </url>
         <url>
-            <loc>https://tvnishq.com/blog</loc>
+            <loc>https://tagarwal.pro/blog</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
         </url>
         
             <url>
-                <loc>https://tvnishq.com/blog/neovim-setup</loc>
+                <loc>https://tagarwal.pro/blog/neovim-setup</loc>
                 <lastmod>2025-01-15T00:00:00.000Z</lastmod>
             </url>
         
             <url>
-                <loc>https://tvnishq.com/blog/redis-expiry-concept</loc>
+                <loc>https://tagarwal.pro/blog/redis-expiry-concept</loc>
                 <lastmod>2025-01-14T00:00:00.000Z</lastmod>
             </url>
         

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   applicationName: "Portfolio Tanishq Agarwal",
   generator: "Next.js",
   keywords: process.env.NEXT_PUBLIC_KEYWORDS ? process.env.NEXT_PUBLIC_KEYWORDS.split(",").map(keyword => keyword.trim()) : [],
-  authors: [{ name: "Tanishq Agarwal", url: "https://tvnishq.com" }],
+  authors: [{ name: "Tanishq Agarwal", url: "https://tagarwal.pro" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   referrer: "no-referrer",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tanishq Agarwal | Portfolio",
     description: "Tanishq Agarwal Portfolio Website",
-    url: "https://tvnishq.com",
+    url: "https://tagarwal.pro",
     siteName: "Tanishq Agarwal | Portfolio",
-    images: [{ url: "https://tvnishq.com/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
+    images: [{ url: "https://tagarwal.pro/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: [{ url: "https://tvnishq.com/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
+    images: [{ url: "https://tagarwal.pro/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
   },
 };
 

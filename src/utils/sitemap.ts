@@ -4,7 +4,7 @@ import getBlogMetaData from './getBlogMetaData';
 
 export function generateSitemap() {
     const posts = getBlogMetaData('blogs');
-    const baseUrl = 'https://tvnishq.com';
+    const baseUrl = 'https://tagarwal.pro';
 
     const sitemapEntries = posts.map(post => {
         return `
