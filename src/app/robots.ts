@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://tagrwal.pro/sitemap.xml',
+    sitemap: 'https://tagarwal.pro/sitemap.xml',
   }
 }
