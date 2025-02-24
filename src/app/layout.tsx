@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     description: "Tanishq Agarwal Portfolio Website",
     url: "https://tagarwal.pro",
     siteName: "Tanishq Agarwal | Portfolio",
-    images: [{ url: "https://tagarwal.pro/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
+    images: [{ url: "https://tagarwal.pro/images/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: [{ url: "https://tagarwal.pro/image/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
+    images: [{ url: "https://tagarwal.pro/images/tanishq-og.png", width: 800, height: 600, alt: "Tanishq Agarwal" }],
   },
 };
 
